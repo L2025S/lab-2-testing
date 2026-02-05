@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AccountComponentTest {
 
-    private AccountComponent account;
+    private AccountComponent accountComponent;
 
     @BeforeEach
     public void setUp(){
-       account = new AccountComponent(0, 1L);
+       accountComponent = new AccountComponent(0, 1L);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class AccountComponentTest {
         int amount = 100;
 
         // Act
-        int result = account.deposit(amount);
+        int result = accountComponent.deposit(amount);
         // Assert
         assertEquals(100, result);
 
@@ -34,7 +34,7 @@ public class AccountComponentTest {
         int amount = 50;
 
         //Act
-       int result = account.withdraw(amount);
+       int result = accountComponent.withdraw(amount);
 
 
         // Assert
@@ -46,7 +46,7 @@ public class AccountComponentTest {
 
         // Arrange
         // Act
-        int result=account.getBalance();
+        int result=accountComponent.getBalance();
 
         // Assert
         assertEquals(0, result);
@@ -57,8 +57,8 @@ public class AccountComponentTest {
         //Arrange
 
         //Act
-        int result1=account.deposit(500);
-        int result2=account.withdraw(200);
+        int result1=accountComponent.deposit(500);
+        int result2=accountComponent.withdraw(200);
 
         //Assert
         assertEquals(500, result1);
